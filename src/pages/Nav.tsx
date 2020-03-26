@@ -1,12 +1,21 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
-    <div className="ui stackable container menu">
-      <a className="item">Motivation</a>
-      <a className="item">Get Started</a>
-      <a className="item">Projected Results</a>
-    </div>
+    <nav>
+      <div className="ui stackable container menu">
+        <Link className="item" to="/">
+          Home
+        </Link>
+        <Link className="item" to="/start">
+          Get Started
+        </Link>
+        <Link className="item" to="/projected">
+          Projected Results
+        </Link>
+      </div>
+    </nav>
   );
 }
 

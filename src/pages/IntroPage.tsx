@@ -1,27 +1,29 @@
 import * as React from "react";
 
-import { Button, Header } from "semantic-ui-react";
+import "./IntroPage.css";
+
+import { Header } from "semantic-ui-react";
 import {
   SpeechBubble,
   SpeechBubbleDirection
 } from "../components/SpeechBubble";
-import Nav from "./Nav";
 
 export function IntroPage() {
   return (
-    <div>
-      <Header as="h1">US Hospital Load Balance API</Header>
-      <Nav />
-      <Header as="h2">What's this?</Header>
-      <div>
+    <div className="page-intro">
+      <Header as="h2">Demonstration</Header>
+      <div className="content-bubbles">
         <SpeechBubble arrowDirection={SpeechBubbleDirection.LEFT}>
           Where is the nearest hospital?
         </SpeechBubble>
         <SpeechBubble arrowDirection={SpeechBubbleDirection.RIGHT}>
-          Do they have the capacity to take you?
+          Queen Mary Hospital.
+        </SpeechBubble>
+        <SpeechBubble arrowDirection={SpeechBubbleDirection.RIGHT}>
+          But they may be at full capacity.
         </SpeechBubble>
         <SpeechBubble arrowDirection={SpeechBubbleDirection.LEFT}>
-          Ok. Where is the nearest and least crowded hospital?
+          Where is the nearest and <i>least crowded</i> hospital?
         </SpeechBubble>
         <SpeechBubble arrowDirection={SpeechBubbleDirection.RIGHT}>
           What is your ZIP Code?
@@ -33,7 +35,6 @@ export function IntroPage() {
           Using our model, we think you should go to...
         </SpeechBubble>
       </div>
-      <Button>hi</Button>;
     </div>
   );
 }

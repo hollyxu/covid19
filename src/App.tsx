@@ -1,12 +1,48 @@
 import * as React from "react";
 import "./App.css";
+import Nav from "./pages/Nav";
+
+import { Header } from "semantic-ui-react";
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { IntroPage } from "./pages/IntroPage";
+import { GetStartedPage } from "./pages/GetStartedPage";
+import { ProjectedResultsPage } from "./pages/ProjectedResultsPage";
 
 function App() {
   return (
     <div className="App">
-      <IntroPage />
+      <Router>
+        <div className="layout-header">
+          <Header as="h1">US Hospital Load Balance API</Header>
+          <div className="layout-nav">
+            <Nav />
+          </div>
+        </div>
+        <div className="layout-contents">
+          <div>
+            {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+            <Switch>
+              <Route path="/start">
+                <GetStartedPage />
+              </Route>
+              <Route path="/projected">
+                <ProjectedResultsPage />
+              </Route>
+              <Route path="/">
+                <IntroPage />
+              </Route>
+            </Switch>
+          </div>
+        </div>
+        <div className="layout-footer">
+          <a href="https://www.covidalliance.com/">
+            Part of the Covid Alliance.
+          </a>
+        </div>
+      </Router>
     </div>
   );
 }

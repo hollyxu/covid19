@@ -6,8 +6,23 @@ body {
   padding: 48px;
   margin: 0 auto;
   margin-top: 48px;
-  width: 600px;
+  width: 960px;
   justify-content: center;
   border: 1px solid #eee;
   background: #fff;
+}
+
+.layout-header {
+}
+.layout-nav {
+}
+
+.layout-contents {
+  padding: 16px;
+}
+
+.layout-footer {
+  text-align: center;
+  font-size: 12px;
+  color: #888;
 }
