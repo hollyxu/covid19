@@ -1,8 +1,9 @@
 import * as React from "react";
 
+import Map from "../assets/map.png";
 import "./IntroPage.css";
 
-import { Header } from "semantic-ui-react";
+import { Header, Input } from "semantic-ui-react";
 import {
   SpeechBubble,
   SpeechBubbleDirection
@@ -11,7 +12,11 @@ import {
 export function IntroPage() {
   return (
     <div className="page-intro">
-      <Header as="h2">Demonstration</Header>
+      <Header as="h2">Motivation</Header>
+      <p>
+        Balancing patient load across testing sites can cut waiting times by 90%
+      </p>
+      <Header as="h2">API Demonstration</Header>
       <div className="content-bubbles">
         <SpeechBubble arrowDirection={SpeechBubbleDirection.LEFT}>
           Where is the nearest hospital?
@@ -29,10 +34,16 @@ export function IntroPage() {
           What is your ZIP Code?
         </SpeechBubble>
         <SpeechBubble arrowDirection={SpeechBubbleDirection.LEFT}>
-          02491
+          <Input value="02139" />
         </SpeechBubble>
         <SpeechBubble arrowDirection={SpeechBubbleDirection.RIGHT}>
-          Using our model, we think you should go to...
+          According to our model, we think you should go to
+          <b> Spaulding Hospital for Continuing Medical Care Cambridge</b>{" "}
+          02138-4308
+        </SpeechBubble>
+        <SpeechBubble arrowDirection={SpeechBubbleDirection.RIGHT}>
+          <img src={Map} />
+          (fake map. we'd need Google API access tokens to display this)
         </SpeechBubble>
       </div>
     </div>

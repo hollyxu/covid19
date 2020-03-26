@@ -2,7 +2,7 @@ import * as React from "react";
 import "./App.css";
 import Nav from "./pages/Nav";
 
-import { Header } from "semantic-ui-react";
+import { Header, Divider } from "semantic-ui-react";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -15,7 +15,9 @@ function App() {
     <div className="App">
       <Router>
         <div className="layout-header">
-          <Header as="h1">US Hospital Load Balance API</Header>
+          <Header as="h1"> COVID-19 Policy Alliance Routing API </Header>
+          Load Balancing Across Stressed Facilities with a High-Availability, ML
+          powered API
           <div className="layout-nav">
             <Nav />
           </div>
@@ -38,9 +40,14 @@ function App() {
           </div>
         </div>
         <div className="layout-footer">
-          <a href="https://www.covidalliance.com/">
-            Part of the Covid Alliance.
-          </a>
+          <Divider />
+          <p>For media inquiries: media@covidalliance.com</p>
+          <p>For partnership inquiries: covidalliance@mit.edu</p>
+          <p>
+            <a href="https://www.covidalliance.com/">
+              Part of the Covid Alliance: www.covidalliance.com
+            </a>
+          </p>
         </div>
       </Router>
     </div>
