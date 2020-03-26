@@ -1,0 +1,54 @@
+.speech-bubble-container {
+  clear: both;
+}
+
+.speech-bubble {
+  position: relative;
+  background: #eee;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px 0;
+}
+
+.speech-bubble.sb-left {
+  margin-left: 32px;
+  margin-right: 64px;
+  float: left;
+}
+
+.speech-bubble.sb-left:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-right-color: #eee;
+  border-left: 0;
+  border-bottom: 0;
+  margin-top: -8px;
+  margin-left: -16px;
+}
+
+.speech-bubble.sb-right {
+  margin-right: 32px;
+  margin-left: 64px;
+  text-align: right;
+  float: right;
+}
+
+.speech-bubble.sb-right:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-left-color: #eee;
+  border-right: 0;
+  border-bottom: 0;
+  margin-top: -8px;
+  margin-right: -16px;
+}
