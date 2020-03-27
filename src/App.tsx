@@ -2,7 +2,7 @@ import * as React from "react";
 import "./App.css";
 import Nav from "./pages/Nav";
 
-import { Header, Divider } from "semantic-ui-react";
+import { Header, Divider, Container } from "semantic-ui-react";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -17,12 +17,16 @@ function App() {
       <div className="App">
         <Router>
           <div className="layout-header">
-            <Header as="h1"> COVID-19 Routing API </Header>
-            Load Balancing Across Stressed Facilities with a High-Availability,
-            ML powered API
-            <div className="layout-nav">
-              <Nav />
-            </div>
+            <Container text>
+              <Header as="h1">Load Balance Across Stressed Facilities</Header>
+              <Header as="h3">
+                A highly-available, easy to integrate API powered by a Machine
+                Learning-driven router.
+              </Header>
+            </Container>
+          </div>
+          <div className="layout-nav">
+            <Nav />
           </div>
           <div className="layout-contents">
             <div>

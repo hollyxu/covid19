@@ -2,29 +2,37 @@ body {
   background: #f5f5f5;
 }
 
-@media only screen and (min-width: 768px) {
-  .App {
-    padding: 48px;
-    margin: 48px;
-    max-width: 1280px;
-  }
-}
-
 .Container {
   display: flex;
   justify-content: center;
-  max-width: 1280px;
   margin: 0 auto;
 }
 
 .App {
   justify-content: center;
-  border: 1px solid #eee;
-  background: #fff;
+  width: 100%;
 }
 
 .layout-header {
-  padding: 16px;
+  padding: 16px 0;
+  background: #2c74fb;
+}
+.layout-header h1.ui.header,
+.layout-header h3.ui.header {
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .layout-header {
+    padding: 64px 0;
+  }
+
+  .layout-header h1.ui.header {
+    font-size: 4em;
+  }
+  .layout-header h3.ui.header {
+    font-size: 1.7em;
+  }
 }
 
 .layout-nav {
@@ -39,4 +47,10 @@ body {
   text-align: center;
   font-size: 14px;
   color: #666;
+}
+
+.ui.menu .active.item {
+  color: #2c74fb;
+  font-weight: bold;
+  /* background-color: #faff7c; */
 }
