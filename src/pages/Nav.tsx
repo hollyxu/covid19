@@ -9,7 +9,7 @@ function Nav() {
           Home
         </NavLink>
         <NavLink className="item" activeClassName="active" to="/start">
-          Get Started
+          Try the API
         </NavLink>
         <NavLink className="item" activeClassName="active" to="/sample-apps">
           Sample Application
