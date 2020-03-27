@@ -1,10 +1,12 @@
 import * as React from "react";
-import { Header, Input } from "semantic-ui-react";
+import { Header, Input, Image } from "semantic-ui-react";
 import Map from "../assets/map.png";
 import {
   SpeechBubble,
   SpeechBubbleDirection
 } from "../components/SpeechBubble";
+
+import "./SampleApps.css";
 
 export function SampleApps() {
   return (
@@ -35,8 +37,7 @@ export function SampleApps() {
           02138-4308
         </SpeechBubble>
         <SpeechBubble arrowDirection={SpeechBubbleDirection.RIGHT}>
-          <img src={Map} />
-          (fake map. we'd need Google API access tokens to display this)
+          <Image src={Map} />
         </SpeechBubble>
       </div>
     </div>
