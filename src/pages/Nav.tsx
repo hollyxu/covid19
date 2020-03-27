@@ -1,19 +1,22 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Nav() {
   return (
     <nav>
       <div className="ui stackable container menu">
-        <Link className="item" to="/">
+        <NavLink className="item" activeClassName="active" to="/" exact={true}>
           Home
-        </Link>
-        <Link className="item" to="/start">
+        </NavLink>
+        <NavLink className="item" activeClassName="active" to="/start">
           Get Started
-        </Link>
-        <Link className="item" to="/projected">
+        </NavLink>
+        <NavLink className="item" activeClassName="active" to="/sample-apps">
+          Sample Application
+        </NavLink>
+        <NavLink className="item" activeClassName="active" to="/projected">
           Projected Results
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );
