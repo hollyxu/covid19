@@ -12,6 +12,8 @@ import {
   Image
 } from "semantic-ui-react";
 
+import { Link } from "react-router-dom";
+
 export function IntroPage() {
   return (
     <div>
@@ -49,7 +51,7 @@ export function IntroPage() {
                   Solution: A highly-available, easy to integrate API powered by
                   a Machine Learning-driven router.
                 </Header>
-                <Button size="large" color="blue">
+                <Button size="large" color="blue" as={Link} to="/start">
                   Try the API
                 </Button>
               </Grid.Column>
